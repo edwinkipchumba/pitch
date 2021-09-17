@@ -47,3 +47,13 @@ def category(cate):
     # print(category)
     title = f'{cate}'
     return render_template('categories.html',title = title, category = category)
+
+    # profile username
+@main.route('/user/<uname>')
+def profile(uname):
+    user = User.query.filter_by(author = uname).first()
+
+    if user is None:
+        abort(404)
+
+    return render_template("profile/profile.html", user = user)
