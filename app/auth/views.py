@@ -20,3 +20,24 @@ def login():
 
     title = "Pitches login"
     return render_template('auth/login.html',login_form = login_form,title=title)
+
+# route register
+
+@auth.route('/register',methods = ["GET","POST"])
+def register():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        user = User(email = form.email.data,
+         author = form.author.data,
+         password = form.password.data)
+
+        db.session.add(user)
+        db.session.commit()
+
+        mail_message("Welcome to Pitch It Up!","email/welcome_user",user.email,user=user)
+
+        title = "New Account"
+
+        return redirect(url_for('auth.login'))
+
+    return render_template('auth/register.html',registration_form = form)
