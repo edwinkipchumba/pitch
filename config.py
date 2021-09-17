@@ -7,3 +7,16 @@ class Config:
 
 
     UPLOADED_PHOTOS_DEST ='app/static/photos'
+
+       #  email configurations
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    SUBJECT_PREFIX = 'Pitch It Up!'
+    SENDER_EMAIL = 'staremdee@gmail.com'
+
+    @staticmethod
+    def init_app(app):
+        pass
