@@ -1,0 +1,16 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/categories.css')}}"> {% endblock %}
+<br>
+<br>
+<br>
+<br>
+
+<body>
+  {% block content %}
+  <br>
+  <br>
+  <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+  <div class="container">
+    <div class="card-columns">
+      {% for category in category[::-1] %}
