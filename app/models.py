@@ -18,3 +18,18 @@ class User(UserMixin,db.Model):
     profile_pic_path = db.Column(db.String())
     pitch = db.relationship('Pitches', backref='author', lazy='dynamic')
     comments = db.relationship('Comments', backref='author', lazy='dynamic')
+
+#to link tables what you add after backref matters
+    @property
+    def password(self):
+        raise AttributeError('You cannnot read the password attribute')
+
+    @password.setter
+    def password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def verify_password(self,password):
+        return check_password_hash(self.password_hash,password)
+
+    def __repr__(self):
+        return f'Author: {self.author}'
