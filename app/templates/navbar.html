@@ -19,3 +19,21 @@
           <a class="nav-link" href="/categories/funny">Funny</a>
         </li>
       </ul>
+
+      <!-- user section -->
+      <ul class="nav navbar-nav navbar-right">
+        {% if current_user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('main.profile',uname=current_user.author)}}">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('auth.logout')}}">Sign out</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('auth.login')}}">Sign in</a>
+        </li>
+        {%endif%}
+      </ul>
+    </div>
+  </nav>
