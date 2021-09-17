@@ -25,10 +25,15 @@ class CommentsModelTest(unittest.TestCase):
 
        # self.assertEquals(self.new_comment.id, 2)
        self.assertEquals(self.new_comment.comment,'cross buns')
-       self.assertEquals(self.new_comment.date_posted,'2018-09-09')
+       self.assertEquals(self.new_comment.date_posted,'2021-09-09')
        self.assertEquals(self.new_comment.user_id, 2)
        # self.assertEquals(self.new_comment.pitches_id, 4)
 
     def test_save_comment(self):
 
         self.assertTrue(len(Comments.query.all())>0)
+
+class PitchesModelTest(unittest.TestCase):
+    
+    def test_save_pitch(self):
+        self.assertTrue(len(Pitches.query.all())>0)
