@@ -3,6 +3,14 @@ from wtforms import StringField,PasswordField,BooleanField,SubmitField,Validatio
 from wtforms.validators import Required,Email,EqualTo
 from ..models import User
 
+
+        # login users
+class LoginForm(FlaskForm):
+    email = StringField('Your Email Address',validators=[Required(),Email()])
+    password = PasswordField('Password',validators =[Required()])
+    remember = BooleanField('Remember me')
+    submit = SubmitField('Sign In')
+
 # registration form
 class RegistrationForm(FlaskForm):
     email = StringField('Your Email Address',validators=[Required(),Email()])
@@ -19,9 +27,3 @@ class RegistrationForm(FlaskForm):
         if User.query.filter_by(author = data_field.data).first():
             raise ValidationError('That author name is taken')
 
-        # login section
-class LoginForm(FlaskForm):
-    email = StringField('Your Email Address',validators=[Required(),Email()])
-    password = PasswordField('Password',validators =[Required()])
-    remember = BooleanField('Remember me')
-    submit = SubmitField('Sign In')
