@@ -4,6 +4,10 @@ from . import main
 from .. import db,photos
 from .forms import PitchForm,CommentForm, UpdateProfile
 
+# blueprint views
+from flask import render_template,request,redirect,url_for
+
+
 # main route
 @main.route('/')
 def index():
