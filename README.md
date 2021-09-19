@@ -91,3 +91,4 @@ If you find a bug, kindly feel free to comment an issue here and inlcude their c
  * E-Mail: edwinkolem5@gmail.com.
 
 ## License
+https://github.com/edwinkipchumba/pitch/blob/master/LICENSE
