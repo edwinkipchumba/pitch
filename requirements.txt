@@ -70,7 +70,6 @@ simplejson==3.16.0
 six==1.14.0
 SQLAlchemy==1.4.23
 systemd-python==234
-unattended-upgrades==0.1
 urllib3==1.25.3
 usb-creator==0.3.7
 visitor==0.1.3
