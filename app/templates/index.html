@@ -2,8 +2,10 @@
 
 <!-- styles block -->
 {% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
 
-<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}"> 
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 {% endblock %}
 {% block content %}
 
@@ -32,12 +34,12 @@
         </div>
       </div>
 
-      <!-- pitches about fun -->
+      <!-- pitches about eduction -->
       <div class="card border-info mb-3" style="max-width: 35rem;">
         <div class="card-header">Education</div>
         <div class="card-body text-info">
           <h5 class="card-title">Education Pitches</h5>
-          <p class="card-text">Want to change peoples mindsets, then give a pitch on how best to make things fun!!</p>
+          <p class="card-text">Want to change peoples mindsets, then give a pitch on how best to make things real!!</p>
           <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
           <button type="button" class="btn btn-outline-primary"><a href="/categories/Education">Read Pitches</a></button>
         </div>

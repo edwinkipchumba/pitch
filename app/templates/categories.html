@@ -2,12 +2,24 @@
 {% import "bootstrap/wtf.html" as wtf %}
 {% block styles%} {{ super() }}
 <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
 {% endblock %}
 
 <br>
 <br>
 <br>
 <br>
+
+<script>
+  $(document).ready(function(){
+    alert("hi");
+  });
+</script>
 
 <body>
   {% block content %}
@@ -39,11 +51,16 @@
             class="btn btn-outline-success btn-sm"><a href="/comments/{{category.id}}">View comments</a></button>
         </div>
 
-             <!-- upvote and downvote -->
+        <p id="likeCount"></p>
+
+        <!-- upvote and downvote -->
         <div class="card-footer bg-transparent border-success">
-          <button type="button" class="btn btn-info btn-sm"><a
-            class ="text-decoration-none text-light" href="">Like</a></button> <button type="button"
-            class="btn btn-danger btn-sm"><a class ="text-decoration-none text-light" href="">Dislike</a></button>
+          <button type="button" id="like" class="btn btn-info btn-sm">
+
+            <a class="text-decoration-none text-light" href="">Like <i class="fas fa-thumbs-up"></i></a></button>
+          <button type="button" class="btn btn-danger btn-sm"><a class="text-decoration-none text-light" href="">Dislike
+              <i class="fas fa-thumbs-down"></i></a>
+          </button>
         </div>
       </div>
 
