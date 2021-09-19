@@ -39,7 +39,7 @@ class DevConfig(Config):
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-    SUBJECT_PREFIX = 'Pitch It Up!'
+    SUBJECT_PREFIX = 'PickUp!'
     SENDER_EMAIL = 'edwinkolem5@gmail.com'
 
   # editor
