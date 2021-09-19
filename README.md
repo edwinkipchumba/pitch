@@ -10,9 +10,9 @@ This is an application that allows users to use that one minute wisely. The user
 
 ## Screenshot images
 
-<img src="./app/static/images/home1.png">
-<img src="./app/static/images/bs.png">
-<img src="./app/static/images/02.png">
+<img src="./app/static/image/pics.png">
+
+
 
 ## Live page
 
