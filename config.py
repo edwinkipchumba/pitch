@@ -3,7 +3,7 @@ import os
 class Config:
 
     SECRET_KEY=os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://edu:kmox002@localhost/pitches'
+    SQLALCHEMY_DATABASE_URI ='postgres://bxrolbgdrkmris:38fb0c0492b1cdf690ceb484f8ae8a5cdecad9d44adb954d0991d504ea2e02af@ec2-54-158-247-97.compute-1.amazonaws.com:5432/d4c7eri4djjtm'
 
     #  image uploader
     UPLOADED_PHOTOS_DEST ='app/static/photos'
@@ -29,7 +29,8 @@ class DevConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
     # connecting to database
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://edu:kmox002@localhost/pitches'
+    SQLALCHEMY_DATABASE_URI ='postgres://bxrolbgdrkmris:38fb0c0492b1cdf690ceb484f8ae8a5cdecad9d44adb954d0991d504ea2e02af@ec2-54-158-247-97.compute-1.amazonaws.com:5432/d4c7eri4djjtm'
+    # 'postgresql+psycopg2://edu:kmox002@localhost/pitches'
 
     DEBUG = True
 
