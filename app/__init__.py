@@ -40,7 +40,7 @@ def create_app(config_name):
     app.register_blueprint(main_blueprint)
 
     # secret
-    app.secret_key='SECRET_KEY'
+    # app.secret_key='SECRET_KEY'
 
 
 
